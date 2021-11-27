@@ -86,4 +86,3 @@ some_game
 
 
 
-#Stii have a questions about how to count correct values of correct answers ?; 
