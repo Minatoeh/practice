@@ -1,6 +1,5 @@
-new_list = ['Hello, my name is' + ' to-delete', ' I dont know what should I do' + 'to-delete', ' thats all' 'to-delete']
-list = new_list.uniq
-print list
+list = ['yo', 'to-delete', 17, 'to-delete', 'what about', 'to-delete']
+new_list = list.reject{ |l| l == 'to-delete'}
+print new_list
 
-
-# Still have a questions
+#Мы создали список с несколькими значенями  "to-delete"  и 3 , после удалили из него все значения "to-delete" и перезаписали заново
