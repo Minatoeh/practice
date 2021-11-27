@@ -1,23 +1,19 @@
 def summ(x, y)
-	# puts "Choice your 2 integers: "
-	# x = gets.to_i
-	# y = gets.to_i - неправильный путь.
-		if (x >= 0 && y >=0)
-			puts x + y
-		end
-		if (x <=0 && y <= 0)
-			puts x - y		
-		end
-		if (x <=0 && y >= 0)
-			return 0
-		end
-		if (x >=0 && y <= 0)
-			return 0
-		end
-
+	if (x >= 0 && y >=0)
+		puts x + y
+	end
+	if (x <=0 && y <= 0)
+		puts x - y		
+	end
+	if (x <=0 && y >= 0)
+		return 0
+	end
+	if (x >=0 && y <= 0)
+		return 0
+	end
 end
 
-print "Choice your 2 integers: "
+puts "Choice your 2 integers: "
 x = gets.to_i
 y = gets.to_i
 puts summ(x, y)
