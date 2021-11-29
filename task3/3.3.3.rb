@@ -11,3 +11,5 @@ y = gets
 
 list = new_list(a) { rand( )}
 end
+
+# no idea how to made it
