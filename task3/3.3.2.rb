@@ -1,10 +1,13 @@
-puts "Choice your  values: "
+def values(a, b, c)
+	numbers = [a, b, c]
+	new_list = numbers.max(2)
+	print new_list
+end
+puts " Choice your 3 numbers please: "
 a = gets.to_i
 b = gets.to_i
-c = gets.to_i 
-numbers = [a, b, c]
+c = gets.to_i
 
-print "Your 2 highest numbers is: " 
-print numbers.max(2) { |a, b, c | a<=>b}
+values(a, b, c)
 
-#Не нашел верного ответа, как это реализовать через функцию. Пользователь задает три числа, мы выбираем два наибольших и выводим их.
+#С помощью функции мы задаем пользователю выбрать 3 числа, после чего возвращаем 2 наибольших.

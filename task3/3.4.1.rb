@@ -1,11 +1,5 @@
-def  minmax(list)
-	list = [ 15, 44, 2]
-	x = list.max 
-	y =list.min
-	return x, y
-	puts list [ x, y]
-end
+new_list = [15, 44, 3, 17, 27]
+numbers = new_list.max, new_list.min
+puts numbers
 
-
-
-puts minmax(2, 15, 44, 77)
+#Решил задачу без функции. Создаем список из любого количества чисел. После  выписываем из них минимальное и максимально.
