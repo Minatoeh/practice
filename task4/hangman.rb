@@ -25,7 +25,7 @@ puts "Итак, Ваш выбор ?"
 		if x != "География"
 			puts "Извините, но вопроса в такой категории у нас нет."
 		else
-
+		y = "Колумб"
 		alphabet = ("а".."я")
 			puts "Какой мореплаватель открыл Америку? "
 			puts "_ _ _ _ _ _"
@@ -36,8 +36,22 @@ puts "Итак, Ваш выбор ?"
 				puts "Поздравяем, Вы выбрали правильную букву ! Ваше слово - К _ _ _ _ _ "
 			elsif input == "К"
 				puts "Поздравяем, Вы выбрали правильную букву ! Ваше слово - К _ _ _ _ _ "
-			else 
-				puts "Увы, Вы ошиблись и Вас ведут уже к месту повешенья(Вы можете ошибиться ещё не больше 5 раз."
+			elsif
+				puts "
+						____________
+						   |
+						   |
+						   |
+						   |
+						   |
+						   |
+						   |		
+						___|________________
+
+
+
+				"
+
 			end
 
 			puts "Попробуйте ещё раз, Ваша буква ?"
@@ -55,7 +69,99 @@ puts "Итак, Ваш выбор ?"
 
 
 
-		
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+			# if input = ""
+			# 	puts ""
+			# elsif input = ""
+			# 	puts ""
+			# else 
+			# 	puts ""
+			# end
+
+
 
 				
 
