@@ -29,3 +29,36 @@ def move(position, player='X')
     @pole[position] = player
 end
 
+def move
+end
+
+def igrok
+
+end
+
+def victory
+
+end
+
+def fullstack
+
+end
+
+def draw
+
+end
+
+def konec
+
+end
+
+def wins
+
+end
+
+def game
+
+end
+
+#Примерный вид игры, как мне кажется ? Необходимо правильно заполнить.
+
