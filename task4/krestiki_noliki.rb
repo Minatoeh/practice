@@ -29,19 +29,33 @@ def move(position, player='X')
     @pole[position] = player
 end
 
-def move
-end
+
+
 
 def igrok
-
+  puts "Клетка, от одной до девяти ?"
+  клетка = gets.chomp
+  if valid_move?(клетка)
+    move(клетка, current_player)
+  else
+    igrok
+  end
+  osnova_polya
 end
+
 
 def victory
 
 end
 
 def fullstack
-
+    taken = 0
+    @pole.each do |i|
+      if i == "X" || i == "O"
+        taken += 1
+      end
+    end
+    return taken
 end
 
 def draw
@@ -60,5 +74,5 @@ def game
 
 end
 
-#Примерный вид игры, как мне кажется ? Необходимо правильно заполнить.
+#Примерный вид игры, как мне кажется ? Необходимо правильно заполнить.  
 
