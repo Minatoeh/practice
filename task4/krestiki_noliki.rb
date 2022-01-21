@@ -25,18 +25,18 @@ def vash_hod(hod)
   hod.to_i - 1
 end
 
-def move(position, player='X')
-    @pole[position] = player
+def move(position, igrok='X')
+    @pole[position] = igrok
 end
 
 
 
 
-def igrok
+def hod
   puts "Клетка, от одной до девяти ?"
   клетка = gets.chomp
   if valid_move?(клетка)
-    move(клетка, current_player)
+    move(клетка, current_igrok)
   else
     igrok
   end
@@ -58,8 +58,14 @@ def fullstack
     return taken
 end
 
-def draw
-
+def igra
+  igrok = nil
+  if turn_count() % 2 == 0
+    igrok = 'X'
+  else
+    igrok = 'O'
+  end
+  return igrok
 end
 
 def konec
