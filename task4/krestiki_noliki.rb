@@ -60,7 +60,7 @@ end
 
 def igra
   igrok = nil
-  if turn_count() % 2 == 0
+  if nomer_hoda() % 2 == 0  
     igrok = 'X'
   else
     igrok = 'O'
@@ -69,7 +69,7 @@ def igra
 end
 
 def konec
-
+  nomer_hoda == 9
 end
 
 def wins
