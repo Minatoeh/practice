@@ -29,9 +29,6 @@ def move(position, igrok='X')
     @pole[position] = igrok
 end
 
-
-
-
 def hod
   puts "Клетка, от одной до девяти ?"
   клетка = gets.strip
@@ -57,7 +54,7 @@ def victory
 
 end
 
-def fullstack
+def nomer_hoda
     taken = 0
     @pole.each do |i|
       if i == "X" || i == "O"
@@ -77,9 +74,7 @@ def igra
   return igrok
 end
 
-def konec
-  nomer_hoda == 9
-end
+
 
 def wins
   POBEDA.detect do |mix|
@@ -88,7 +83,29 @@ def wins
     position_taken?(mix[0])
 end
 
-def game
+def konec
+  nomer_hoda == 9
+end
+
+def draw?
+  !wins? && konec?
+end
+
+def over?
+  wins? || konec? || draw?
+end
+
+def winner
+  wins = ""
+  if winner = wins?
+    wins = @board[winner.first]
+  end
+end
+
+def play
+  until over?
+    turn
+  end
 
 end
 
