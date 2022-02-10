@@ -21,8 +21,8 @@ POBEDA = [
   [0, 4, 8]
 ]
 
-def vash_hod(hod)
-  hod.to_i - 1
+def vash_hod(vash_hod)
+  vash_hod.to_i - 1
 end
 
 def move(position, igrok='X')
@@ -34,15 +34,24 @@ end
 
 def hod
   puts "Клетка, от одной до девяти ?"
-  клетка = gets.chomp
+  клетка = gets.strip
   if valid_move?(клетка)
     move(клетка, current_igrok)
   else
-    igrok
+    hod
   end
   osnova_polya
 end
 
+def turn_count
+  score = 0
+  @pole.each do |i|
+    if i == "X" || i == "O"
+      score += 1
+    end
+  end
+  return score
+end
 
 def victory
 
@@ -73,7 +82,10 @@ def konec
 end
 
 def wins
-
+  POBEDA.detect do |mix|
+    @pole[mix[0]] == @pole[mix[1]] &&
+    @pole[mix[1]] == @pole[mix[2]] &&
+    position_taken?(mix[0])
 end
 
 def game
