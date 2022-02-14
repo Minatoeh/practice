@@ -1,13 +1,5 @@
-def osnova
+def initialize
   @pole = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-end
-
-def osnova_polya
-  puts " #{@pole[0]} | #{@pole[1]} | #{@pole[2]} "
-  puts " ----------- "
-  puts " #{@pole[3]} | #{@pole[4]} | #{@pole[5]} "
-  puts " ----------- "
-  puts " #{@pole[6]} | #{@pole[7]} | #{@pole[8]} "
 end
 
 POBEDA = [
@@ -20,9 +12,16 @@ POBEDA = [
   [6, 4, 2],
   [0, 4, 8]
 ]
+def osnova_polya
+  puts " #{@pole[0]} | #{@pole[1]} | #{@pole[2]} "
+  puts " ----------- "
+  puts " #{@pole[3]} | #{@pole[4]} | #{@pole[5]} "
+  puts " ----------- "
+  puts " #{@pole[6]} | #{@pole[7]} | #{@pole[8]} "
+end
 
-def vash_hod(vash_hod)
-  vash_hod.to_i - 1
+def vash_hod(vashhod)
+  vashhod.to_i - 1
 end
 
 def move(position, igrok='X')
@@ -50,8 +49,6 @@ def turn_count
   return score
 end
 
-def victory
-
 end
 
 def nomer_hoda
@@ -74,8 +71,6 @@ def igra
   return igrok
 end
 
-
-
 def wins
   POBEDA.detect do |mix|
     @pole[mix[0]] == @pole[mix[1]] &&
@@ -87,27 +82,36 @@ def konec
   nomer_hoda == 9
 end
 
-def draw?
-  !wins? && konec?
+def draw
+  !wins && konec
 end
 
-def over?
-  wins? || konec? || draw?
+def over
+  wins || konec? || draw
 end
 
-def winner
+def pobeda
   wins = ""
-  if winner = wins?
-    wins = @board[winner.first]
+  if pobeda = wins
+    wins = @pole[pobeda.first]
   end
 end
 
 def play
-  until over?
-    turn
+  until over
+    hod
   end
 
+  if wins
+    pobeda = pobeda()
+    puts "Поздравляем #{pobeda}!"
+  elsif draw?
+    puts "Ничья !"
+  end
 end
+end
+
 
 #Примерный вид игры, как мне кажется ? Необходимо правильно заполнить.  
 
+  
