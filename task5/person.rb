@@ -1,10 +1,12 @@
 class Person
-	def initialize(age, name)
+	def initialize(age, call)
 		@age = age
-		@name = name
+		@call = call
 	end
 
 	def know(person)
+		age = gets.to_i
+		call = gets.chomp
 
 	end
 
@@ -12,7 +14,8 @@ class Person
 
 	end
 end
-
+m = Person.new(28, "Minatoeh")
+puts "New person is added. Please welcome #{m}"
 
 
 
